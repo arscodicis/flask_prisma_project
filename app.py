@@ -21,8 +21,7 @@ def register():
                     'name': name,
                     'email': email
                 })
-                flash('User registered successfully!', 'success')
-                return redirect(url_for('register'))
+                return render_template('thank_you.html', name=name)
             except Exception as e:
                 flash(f'Error: {str(e)}', 'error')
 
